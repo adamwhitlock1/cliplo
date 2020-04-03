@@ -1,0 +1,52 @@
+{
+  "name": "cliplo",
+  "version": "0.0.1",
+  "description": "Clipboard manager and general productivity tools",
+  "main": "./dist/main/index.js",
+  "scripts": {
+    "dev": "node .electron-nuxt/check-engines.js && cross-env-shell NODE_ENV=development node .electron-nuxt/index.js",
+    "build": "node .electron-nuxt/check-engines.js && cross-env-shell NODE_ENV=production node .electron-nuxt/index.js",
+    "test": "",
+    "lint": "node_modules/.bin/eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter ./src",
+    "lint:fix": "yarn run lint -- --fix",
+    "preinstall": "node .electron-nuxt/check-engines.js",
+    "postinstall": "electron-builder install-app-deps & yarn run lint:fix"
+  },
+  "keywords": [],
+  "author": "adam.whitlock627@gmail.com",
+  "license": "MIT",
+  "homepage": "https://github.com/michalzaq12/electron-nuxt/blob/master/README.md",
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "resolutions": {
+    "@types/node": "12.12.6"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "1.1.2",
+    "@nuxtjs/tailwindcss": "^1.4.0",
+    "@xpda-dev/core": "^0.1.5",
+    "@xpda-dev/electron-builder": "^0.1.1",
+    "@xpda-dev/electron-launcher": "^0.1.1",
+    "@xpda-dev/webpack-step": "^0.1.2",
+    "babel-eslint": "10.1.0",
+    "browser-env": "3.3.0",
+    "cross-env": "7.0.2",
+    "deepmerge": "4.2.2",
+    "electron": "8.1.1",
+    "electron-builder": "22.4.1",
+    "electron-debug": "3.0.1",
+    "eslint": "5.16.0",
+    "eslint-friendly-formatter": "4.0.1",
+    "eslint-loader": "3.0.3",
+    "nuxt": "2.11.0",
+    "vue-devtools": "5.1.3",
+    "webpack": "4.42.1",
+    "webpack-node-externals": "1.7.2"
+  },
+  "dependencies": {
+    "clipboardy": "^2.3.0",
+    "electron-workers": "^1.10.3",
+    "tailwindcss": "^1.2.0"
+  }
+}
